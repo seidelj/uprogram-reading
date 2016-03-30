@@ -1,0 +1,9 @@
+venv
+import-items
+staticfiles
+*.pyc
+*~
+*.swp
+access.csv
+.DS_Store
+

@@ -1,0 +1,25 @@
+{% extends 'mathtutor/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="col-md-8 col-md-pull-4">
+{% if error %}
+<div class="alert alert-red">
+    <p style="font-size: 1rem">ERROR: Please select a theme!</p>
+</div>
+{% endif %}
+
+<p style="font-size: 1.1rem">Below you can also choose a theme to make passing quizes more interesting!  Each theme determines what levels you work through, and each comes with fun names for each level.  There are 7 levels for the game, and you complete a level each time you pass off 20 more quizzes.  You can choose a new theme as many times as you want, so one day you can go with Lord of the Rings, the next day you can do My Little Ponies instead, and the next day you can work to become the President of the United States.  It's up to you!</p>
+
+<div class="alert alert-info">
+<p style="font-size: 1.5rem">Choose a theme!</p>
+<br>
+<form action="{% url 'm:theme_selection' %}", method='post'>
+{% csrf_token %}
+{% for item in form %}
+	<input type='radio' name="theme" value="{{ item.id }}" {% if item.id == user.student.theme.id %}checked {% endif %}> {{ item.name }}<br>
+{% endfor %}
+<input class="submit-btn" type='submit' value="select" style="border-radius: 4px; background-color: white; color: #0950B2; box-shadow: none; border: none; margin-top: 10px; padding: 7px"/>
+</form>
+</div>
+</div>
+{% endblock %}
