@@ -163,10 +163,10 @@ a.thumbnail:hover {
 .thumbnails a:hover {
     text-decoration: underline;
 }
-.Thumb_md , .Thumb_mp, .Thumb_ee {
+.Thumb_md , .Thumb_mp, .Thumb_ee, .Thumb_one {
     background-color: #FFC32B;
 }
-.Thumb_nof, .Thumb_fpr, .Thumb_pr {
+.Thumb_nof, .Thumb_fpr, .Thumb_pr, .Thumb_two {
     background-color: #4BAE7F;
 }
 .Thumb_nobt, .Thumb_ns {
@@ -225,10 +225,10 @@ a.thumbnail:hover {
 .panel-custom .panel-heading {
     color: white;
 }
-.Thumb_md, .Thumb_mp, .Thumb_ee .panel-custom .panel-heading {
+.Thumb_md, .Thumb_mp, .Thumb_ee, .Thumb_one .panel-custom .panel-heading {
     background-color: #FFC32B;
 }
-.Thumb_nof, .Thumb_fpr, .Thumb_pr .panel-custom .panel-heading {
+.Thumb_nof, .Thumb_fpr, .Thumb_pr, .Thumb_two .panel-custom .panel-heading {
     background-color: #4BAE7F;
 }
 .Thumb_nobt, .Thumb_ns .panel-custom .panel-heading {

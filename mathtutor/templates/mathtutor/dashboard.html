@@ -1,5 +1,5 @@
 {% extends 'mathtutor/base.html' %}
-{% block title %}UProgram Math{% endblock %}
+{% block title %}UProgram Reading{% endblock %}
 {% block content %}
 <div class="col-md-8 col-md-pull-4">
 <div class="thumbnails">
@@ -9,8 +9,8 @@
 </div>
 <div class="row">
 {% endif %}
-    <div class="col-sm-4">
-        <a href="{% url 'm:quiz_or_practice' category.key %}" class="Thumb_{{ category.key }} thumbnail" style="font-weight: bold;">{{ category.name }}
+    <div class="col-sm-6">
+        <a href="{% url 'm:list_quizes' category.key %}" class="Thumb_{{ category.key }} thumbnail" style="font-weight: bold;">{{ category.name }}
             <hr>
         <p style="font-weight: normal; line-height: 1em">Quiz Progress</p>
         <div class="progress">
