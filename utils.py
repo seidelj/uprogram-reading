@@ -14,7 +14,7 @@ def get_response():
     print _TOKEN
     req = urllib2.Request(_API_URL)
     req.add_header("Authorization", "Token {}".format(_TOKEN))
-    respone = urllib2.urlopen(req)
+    response = urllib2.urlopen(req)
     if response.code == 200:
         return response
     else:
