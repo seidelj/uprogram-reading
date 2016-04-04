@@ -1,7 +1,8 @@
 import json
 import website.wsgi
 from django.core.exceptions import ObjectDoesNotExist
-
+from mathtutor.models import Result, Quiz
+from django.contrib.auth.models import User
 
 class ResponseParser:
 

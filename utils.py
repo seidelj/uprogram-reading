@@ -29,7 +29,7 @@ def main():
     else:
         blkUpdateList = []
         parser = ResponseParser()
-        date = json.loads(response.read())
+        data = json.loads(response.read())
         for item in data['results']:
             created, obj = parser.parse_response(item)
             if not created:
