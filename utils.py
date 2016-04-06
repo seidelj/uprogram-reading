@@ -11,7 +11,6 @@ _USER = os.getenv("USER_ID")
 _TOKEN = os.getenv('API_TOKEN')
 
 def get_response():
-    print _TOKEN
     req = urllib2.Request(_API_URL)
     req.add_header("Authorization", "Token {}".format(_TOKEN))
     response = urllib2.urlopen(req)
