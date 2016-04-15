@@ -57,4 +57,4 @@ def parentforms():
 
 if __name__ == "__main__":
     parentforms()
-    #main()
+    main()
