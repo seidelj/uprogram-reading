@@ -1,7 +1,7 @@
 import json
 import website.wsgi
 from django.core.exceptions import ObjectDoesNotExist
-from mathtutor.models import Result, Quiz
+from mathtutor.models import Result, Quiz, ParentFormResult
 from django.contrib.auth.models import User
 
 class ResponseParser:
@@ -49,3 +49,34 @@ class ResponseParser:
             quiz_id=quiz.id,
         )
 
+class ParentFormParser:
+
+    def __init__(self):
+        pass
+
+    def get_user(self, name):
+        try:
+            usr = User.objects.get(username=name)
+        except ObjectDoesNotExist:
+            return False
+        else:
+            return usr
+
+    def parse_response(self, data):
+        try:
+            result = ParentFormResult.objects.get(response_id=data['response_id'])
+        except ObjectDoesNotExist:
+            pass
+        else:
+            return False, "Result already exists"
+
+        user = self.get_user(data['username'])
+        if not user:
+            return False, "User not found"
+
+        return True, ParentFormResult(
+            student_id=user.id,
+            response_id=data['response_id'],
+            completeBool=data['completeBool'],
+            qualtrics_id=data['qualtrics_id'],
+        )
