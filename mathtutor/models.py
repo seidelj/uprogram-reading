@@ -23,6 +23,7 @@ class Constants:
         {'base': 15, 'marginal': .75},
         {'base': 10, 'marginal': 1.0},
         {'base': 5, 'marginal': 1.25},
+        {'base': 10, 'marginal': 1.50},
     ]
 
     parent_forms = [
