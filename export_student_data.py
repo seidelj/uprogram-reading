@@ -1,9 +1,10 @@
 import website.wsgi
 import os, csv
 from mathtutor.models import Student
+from django.db.models import Q
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-csvFile = os.path.join(ROOT, 'student_data.csv')
+csvFile = os.path.join(ROOT, 'student_data_reading.csv')
 
 
 def write_headers(writer):
@@ -24,7 +25,8 @@ def main():
     with open(csvFile, 'w') as f:
         writer = csv.writer(f, csv.excel)
         write_headers(writer)
-        for student in Student.objects.filter(district="152cm"):
+        for student in Student.objects.filter(Q(district='152b') | Q(district='152cm2') | Q(district='152cp2')):
+            print student.stuid.username
             writer.writerow(build_row(student))
 
 
