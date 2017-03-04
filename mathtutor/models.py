@@ -20,6 +20,9 @@ class Constants:
         '152b2': timezone.make_aware(datetime.datetime(2016, 12, 18, 16, 00), timezone.get_current_timezone()),
         '152cm2': timezone.make_aware(datetime.datetime(2017, 1, 21, 16, 00), timezone.get_current_timezone()),
         '152cp2': timezone.make_aware(datetime.datetime(2017, 1, 22, 16, 00), timezone.get_current_timezone()),
+        '152b3': timezone.make_aware(datetime.datetime(2017, 3, 17, 16, 00), timezone.get_current_timezone()),
+        '152cp3': timezone.make_aware(datetime.datetime(2017, 4, 7, 16, 00), timezone.get_current_timezone()),
+        '152cm3': timezone.make_aware(datetime.datetime(2017, 4, 15, 16, 00), timezone.get_current_timezone()),
     }
 
     contracts = [
